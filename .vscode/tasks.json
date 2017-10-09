@@ -4,9 +4,8 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "taskName": "Local Deploy",
-            "type": "shell",
-            "command": "gulp src",
+            "type": "gulp",
+            "task": "default",
             "problemMatcher": []
         }
     ]
