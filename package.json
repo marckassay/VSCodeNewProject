@@ -1,0 +1,25 @@
+{
+  "name": "vscodenewproject",
+  "version": "1.0.0",
+  "description": "Rapidly creates a new project to be used in VS Code that installs essential package(s).",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "eslint": "^4.8.0",
+    "gulp": "^3.9.1",
+    "watchify-middleware": "^1.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marckassay/VSCodeNewProject.git"
+  },
+  "author": "Marc Kassay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marckassay/VSCodeNewProject/issues"
+  },
+  "homepage": "https://github.com/marckassay/VSCodeNewProject#readme"
+}
