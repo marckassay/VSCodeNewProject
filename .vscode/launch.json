@@ -1,3 +1,4 @@
+/**
 {
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
@@ -8,15 +9,59 @@
             "name": "Launch localhost",
             "type": "chrome",
             "request": "launch",
-            "url": "http://localhost/mypage.html",
-            "webRoot": "${workspaceRoot}/wwwroot"
+            "preLaunchTask": "start_gulp_server",
+            "sourceMaps": false,
+            "url": "http://localhost:8000/",
+            "webRoot": "${workspaceRoot}/index.html"
         },
         {
-            "name": "Launch index.html (disable sourcemaps)",
+            "name": "Launch index.html",
             "type": "chrome",
             "request": "launch",
             "sourceMaps": false,
             "file": "${workspaceRoot}/dist/index.html"
-        },
+        }
+    ]
+}
+*/
+
+/**
+runtimeExecutable: Workspace relative or absolute path to the runtime executable to be used. If not specified, Chrome will be used from the default install location
+runtimeArgs: Optional arguments passed to the runtime executable
+
+Windows: <path to chrome>/chrome.exe --remote-debugging-port=9222
+macOS: /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
+Linux: google-chrome --remote-debugging-port=9222
+*/
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Gulp",
+        "outFiles": ["${workspaceRoot}/dist"],
+        "program": "${workspaceRoot}/node_modules/gulp/bin/gulp.js",
+        "args": [
+          "default"
+        ]
+      },
+      {
+        "type": "chrome",
+        "request": "launch",
+        "name": "Chrome",
+        "port": 9222,
+        "url": "http://localhost:8000",
+        "webRoot": "${workspaceRoot}/src",
+        "sourceMaps": false,
+        "timeout": 15000,
+        "trace": "verbose"
+      }
+    ],
+    "compounds": [
+      {
+        "name": "Full-stack",
+        "configurations": ["Gulp", "Chrome"]
+      }
     ]
 }

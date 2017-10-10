@@ -1,6 +1,7 @@
 'use strict';
 var gulp = require('gulp');
 var del = require('del');
+var webserver = require('gulp-webserver');
 
 var paths = {
     html: './src/*.html',
@@ -14,23 +15,34 @@ gulp.task('clean', function() {
 });
 
 gulp.task("update-html", ['clean'], function () {
-    return gulp.src(paths.html, { base: 'src' })
+    return gulp.src(paths.html, { base: './src' })
         .pipe(gulp.dest("./dist"));
 });
 
 gulp.task("update-scripts", ['clean'], function () {
-    return gulp.src(paths.scripts, { base: 'src' })
+    return gulp.src(paths.scripts, { base: './src' })
         .pipe(gulp.dest('./dist'));
 });
 
 gulp.task("update-styles", ['clean'], function () {
-    return gulp.src(paths.styles, { base: 'src' })
+    return gulp.src(paths.styles, { base: './src' })
         .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('update-images', ['clean'], function() {
-    return gulp.src(paths.images, { base: 'src' })
+    return gulp.src(paths.images, { base: './src' })
         .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('startserver', function() {
+    return gulp.src('./dist')
+        .pipe(webserver({
+        host: 'localhost',
+        port: 8000,
+        livereload: false, 
+        directoryListing: false,
+        open: true
+    }));
 });
 
 // Rerun the task when a file changes
@@ -45,4 +57,6 @@ gulp.task('default', ['watch',
                       'update-html',
                       'update-scripts',
                       'update-styles',
-                      'update-images']);
+                      'update-images',
+                      'startserver']);
+
