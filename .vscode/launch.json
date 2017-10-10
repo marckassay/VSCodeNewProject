@@ -1,31 +1,4 @@
 /**
-{
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Launch localhost",
-            "type": "chrome",
-            "request": "launch",
-            "preLaunchTask": "start_gulp_server",
-            "sourceMaps": false,
-            "url": "http://localhost:8000/",
-            "webRoot": "${workspaceRoot}/index.html"
-        },
-        {
-            "name": "Launch index.html",
-            "type": "chrome",
-            "request": "launch",
-            "sourceMaps": false,
-            "file": "${workspaceRoot}/dist/index.html"
-        }
-    ]
-}
-*/
-
-/**
 runtimeExecutable: Workspace relative or absolute path to the runtime executable to be used. If not specified, Chrome will be used from the default install location
 runtimeArgs: Optional arguments passed to the runtime executable
 
@@ -58,6 +31,8 @@ Linux: google-chrome --remote-debugging-port=9222
         "trace": "verbose"
       }
     ],
+    // "A compound launch configuration lists the names of two or more launch configurations 
+    // that should be launched in *parallel*." - github.com/Microsoft/vscode-docs/blob/master/docs/editor/debugging.md
     "compounds": [
       {
         "name": "Full-stack",
