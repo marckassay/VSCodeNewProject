@@ -2,10 +2,17 @@
   "name": "vscodenewproject",
   "version": "1.0.0",
   "description": "Rapidly creates a new project to be used in VS Code that installs essential package(s).",
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "@types/lodash": "^4.14.77",
+    "@types/webpack": "^3.0.13"
+  },
+  "devDependencies": {
+    "ts-loader": "^2.3.7",
+    "typescript": "^2.5.3",
+    "webpack": "^3.7.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
