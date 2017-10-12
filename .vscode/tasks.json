@@ -4,9 +4,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "identifier": "start_gulp_server",
-            "type": "gulp",
-            "task": "default",
+            "identifier": "start_server_task",
+            "type": "npm",
+            "script": "start_server",
             "problemMatcher": []
         }
     ]

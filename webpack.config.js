@@ -2,8 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  //entry: './src/index.ts',
-  entry: './src/index.js',
+  entry: './src/index.ts',
   module: {
     rules: [
       {

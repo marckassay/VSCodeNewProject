@@ -37,31 +37,24 @@ Linux: google-chrome --remote-debugging-port=9222
     "version": "0.2.0",
     "configurations": [
       {
-        "type": "node",
-        "request": "launch",
-        "name": "Gulp",
-        "outFiles": ["${workspaceRoot}/dist"],
-        "program": "${workspaceRoot}/node_modules/gulp/bin/gulp.js",
-        "args": [
-          "default"
-        ]
-      },
-      {
         "type": "chrome",
         "request": "launch",
         "name": "Chrome",
         "port": 9222,
-        "url": "http://localhost:8000",
+        "url": "http://localhost:8080/webpack-dev-server/bundle",
         "webRoot": "${workspaceRoot}/src",
-        "sourceMaps": false,
+        "sourceMaps": true,
         "timeout": 15000,
-        "trace": "verbose"
+        "trace": "verbose",
+        "preLaunchTask": "start_server_task"
       }
-    ],
+    ]
+    /*
     "compounds": [
       {
         "name": "Full-stack",
         "configurations": ["Gulp", "Chrome"]
       }
     ]
+    */
 }
