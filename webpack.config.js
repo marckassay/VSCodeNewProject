@@ -12,17 +12,19 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new webpack.SourceMapDevToolPlugin({
-        filename: '[name].js.map',
-        exclude: ['vendor.js']
-      })
-  ],
+  devtool: 'eval-source-map',
+  devServer: {
+    inline: false,
+    overlay: {
+      warnings: false,
+      errors: true
+    }
+  },
   resolve: {
     extensions: [ ".tsx", ".ts", ".js" ]
   },
   output: {
-    filename: 'bundle.js',
+    filename: './bundle.js',
     path: path.resolve(__dirname, 'dist')
   }
 };
