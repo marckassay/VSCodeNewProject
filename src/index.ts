@@ -1,5 +1,5 @@
 //require("./assets/css/styles.scss")
-//require('./index.html');
+require('./index');
 
 class Greeter {
     constructor(public greeting: string) { }
@@ -10,4 +10,4 @@ class Greeter {
 
 var greeter = new Greeter("Marc' world!");
 
-document.body.style.color = '#0000FF';
+document.body.style.color = '#0000FF';  
