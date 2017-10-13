@@ -2,29 +2,32 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
+  //context: path.resolve(__dirname, "./src"),
   entry: './src/index.ts',
+  output: {
+    //path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+    //publicPath: "http://localhost:8080/dist/"
+  },
+  devtool: 'eval-source-map',
+  devServer: {
+    contentBase: path.resolve(__dirname, 'dist'),
+    //inline: false
+  },
   module: {
     rules: [
+     // {
+     //   test: /\.html$/,
+     //   use: [ 'file-loader?name=[path][name].[ext]!extract-loader!html-loader' ]
+     // },
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/
-      }
+      },
     ]
-  },
-  devtool: 'eval-source-map',
-  devServer: {
-    inline: false,
-    overlay: {
-      warnings: false,
-      errors: true
-    }
   },
   resolve: {
     extensions: [ ".tsx", ".ts", ".js" ]
-  },
-  output: {
-    filename: './bundle.js',
-    path: path.resolve(__dirname, 'dist')
   }
 };

@@ -1,11 +1,13 @@
-import * as _ from "lodash";
+//require("./assets/css/styles.scss")
+//require('./index.html');
 
-function component() {
-    var element = document.createElement('div');
-  
-    element.innerHTML = _.join(['foo', 'webpack'], ' ');
-  console.log("hello")
-    return element;
-}
-  
-document.body.appendChild(component());
+class Greeter {
+    constructor(public greeting: string) { }
+    greet() {
+        return "<h1>" + this.greeting + "</h1>";
+    }
+};
+
+var greeter = new Greeter("Marc' world!");
+
+document.body.style.color = '#ff00ff';

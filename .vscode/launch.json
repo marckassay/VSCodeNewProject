@@ -4,17 +4,14 @@
       {
         "type": "chrome",
         "request": "launch",
-        "name": "Chrome",
+        "name": "Launch Chrome Debugger",
         "port": 9222,
-        "url": "http://localhost:8080",
+        "url": "http://localhost:8080/dist",
         "webRoot": "${workspaceRoot}",
         "sourceMaps": true,
         "timeout": 15000,
         "trace":"verbose"
        // "preLaunchTask": "start_server_task"
-    //   "sourceMapPathOverrides": {
-  //      "webpack:///./src/":"index.ts?eac3"
-//}
       }
     ]
 }
