@@ -10,4 +10,4 @@ class Greeter {
 
 var greeter = new Greeter("Marc' world!");
 
-document.body.style.color = '#ff00ff';
+document.body.style.color = '#0000FF';

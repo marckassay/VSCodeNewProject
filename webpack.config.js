@@ -9,10 +9,9 @@ module.exports = {
     filename: 'bundle.js',
     //publicPath: "http://localhost:8080/dist/"
   },
-  devtool: 'eval-source-map',
+  devtool: 'source-map',
   devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
-    //inline: false
+    contentBase: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [
