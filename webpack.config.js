@@ -17,9 +17,13 @@ module.exports = {
     rules: [
       {
         test: /\.html$/,
-        use: [ 
-          'file-loader?name=[path][name].[ext]!extract-loader!html-loader'
-        ]
+        use: [{ 
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            useRelativePath: true
+          } 
+        }]
       },
       {
         test: /\.tsx?$/,
