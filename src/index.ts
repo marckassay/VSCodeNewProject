@@ -1,4 +1,4 @@
-//require("./assets/css/styles.scss")
+require("./assets/css/styles.scss")
 require('./index.html');
 
 class Greeter {
