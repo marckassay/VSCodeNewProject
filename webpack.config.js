@@ -42,19 +42,30 @@ module.exports = {
             // if sourceMap, eg: 'E:/marckassay/VSCodeNewProject/src/assets/css/src/assets/css/styles.scss'
             loader: "sass-loader", options: { sourceMap: true }
         }]
-    },
-    {
-      test: /\.(png|jpg|gif|svg)$/,
-      use: [
-        {
-          loader: 'url-loader',
-          options: {
-            limit: 8192,
-            fallback: 'file-loader'
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: "style-loader"
+          }, {
+            // if sourceMap, eg: 'blob:http://localhost:8080/c340184f-5285-4072-9b54-8be639160073'
+            loader: "css-loader", options: { sourceMap: true }
           }
-        }
-      ]
-    }
+        ]
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+              fallback: 'file-loader'
+            }
+          }
+        ]
+      }
     ]
   },
   

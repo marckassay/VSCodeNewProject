@@ -1,4 +1,7 @@
 require("./assets/css/styles.scss")
+require("./assets/css/simple-grid.scss")
+require("./assets/css/zc-grid.css")
+//require("./assets/css/reset.css")
 require('./index.html');
 
 class Greeter {
