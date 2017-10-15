@@ -42,6 +42,18 @@ module.exports = {
             // if sourceMap, eg: 'E:/marckassay/VSCodeNewProject/src/assets/css/src/assets/css/styles.scss'
             loader: "sass-loader", options: { sourceMap: true }
         }]
+    },
+    {
+      test: /\.(png|jpg|gif|svg)$/,
+      use: [
+        {
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+            fallback: 'file-loader'
+          }
+        }
+      ]
     }
     ]
   },

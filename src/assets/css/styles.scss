@@ -1,4 +1,4 @@
-$background: rgb(185, 122, 93);
+$background: rgb(92, 116, 255);
 
 html { box-sizing: box-model; }
 *, *:before, *:after { box-sizing: inherit; outline:0; }
@@ -9,46 +9,32 @@ header,article,section{ display:block;position: relative; }
 }
 
 @mixin background-svg($svg){
-    background-image: svg-url($svg);
+    content: svg-url($svg);
     background-size: 100px 100px;
     background-repeat:no-repeat;
     background-position:50% 50%;
+}
+
+@mixin background-bitmap($bitmap) {
+  content: url("../images/#{$bitmap}-logo.png");
+  background-size: 100px 100px;
+  background-repeat:no-repeat;
+  background-position:50% 50%;
 }
 
 html {
   background: $background;
   font-size: .625em;// 10px for rems
 }
-/*
+
 .vscode {
-    @include background-svg('vscode');
+   // @include background-svg('vscode');
+   @include background-svg('vscode');
+   
 }
 .typescript {
-    @include background-svg('ts');
+    @include background-bitmap('ts');
 }
 .webpack {
     @include background-svg('webpack');
-}
-*/
-.showcase {
-  display: block;
-  font-size: 0;
-  list-style: none;
-  margin: 0;
-  padding: 4.8rem;
-  text-align: center;
-
-  li {
-    display: inline-block;
-    margin: 1.2rem;
-  }
-
-  a, svg {
-    display: block;
-  }
-  
-  a {
-    height: 9.6rem;
-    width: 9.6rem;
-  }
 }
