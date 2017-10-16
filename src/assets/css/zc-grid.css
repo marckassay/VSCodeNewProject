@@ -23,6 +23,9 @@ a:hover {
   text-decoration: line-through;
 }
 
+i {
+  color: #fff;
+}
 .m-bottom {
   margin-bottom: 48px;
 }
@@ -41,12 +44,12 @@ a:hover {
 .body-content > .container {
   position: relative;
   top: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 }
 
 .jumbotron {
-  background: rgb(120, 129, 254);
-  background-image: linear-gradient(rgb(139, 227, 243), rgb(120, 129, 254));
+  background: #d97634;
+  background-image: linear-gradient(#34a5d9, #d97634);
   height: 25rem;
   width: 100%;
   z-index: 100 !important;
@@ -154,8 +157,8 @@ code,
 }
 
 footer {
-  background: rgb(120, 129, 254);
-  background-image: linear-gradient(rgb(139, 227, 243), rgb(120, 129, 254));
+  background: #d97634;
+  /*background-image: linear-gradient(#ff8a3c, #d97634);*/
   padding-bottom: 50px;
 }
 

@@ -3,12 +3,10 @@ const webpack = require('webpack');
 
 
 module.exports = {
-  //context: path.resolve(__dirname, "src"),
-  entry: './src/index.ts',
+  context: path.resolve(__dirname, 'src'),
+  entry: './index.ts',
   output: {
-    //path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    //publicPath: "http://localhost:8080/dist/"
   },
   devtool: 'source-map',
   devServer: {
@@ -18,6 +16,7 @@ module.exports = {
     rules: [
       {
         test: /\.html$/,
+        exclude: /node_modules/,
         use: [{ 
           loader: 'file-loader',
           options: {
@@ -28,11 +27,14 @@ module.exports = {
       },
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        use: [{ 
+          loader: 'ts-loader'
+        }]
       },
       {
         test: /\.scss$/,
+        exclude: /node_modules/,
         use: [{
             loader: "style-loader"
         }, {
@@ -45,17 +47,19 @@ module.exports = {
       },
       {
         test: /\.css$/,
+        exclude: /node_modules/,
         use: [
           {
             loader: "style-loader"
           }, {
             // if sourceMap, eg: 'blob:http://localhost:8080/c340184f-5285-4072-9b54-8be639160073'
-            loader: "css-loader", options: { sourceMap: true }
+            loader: "css-loader", options: { sourceMap: true}
           }
         ]
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(png|jpg|gif|svg|ttf|eot)$/,
+        exclude: /node_modules/,
         use: [
           {
             loader: 'url-loader',

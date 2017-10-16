@@ -10,8 +10,8 @@
         "webRoot": "${workspaceRoot}",
         "sourceMaps": true,
         "timeout": 15000,
-        "trace":"verbose"
-       // "preLaunchTask": "start_server_task"
+        "trace":"verbose",
+        "preLaunchTask": "start_server_task"
       }
     ]
 }
