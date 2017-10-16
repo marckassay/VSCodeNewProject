@@ -6,11 +6,14 @@ require('./index.html');
 
 class Greeter {
     constructor(public greeting: string) { }
-    greet() {
-        return "<h1>" + this.greeting + "</h1>";
+    smile() {
+        let h2 = document.createElement('h2');
+        h2.textContent = this.greeting;
+        return document.getElementById('typescript-chime-in').appendChild(h2);
     }
 };
 
-var greeter = new Greeter("Marc world!");
-
-document.body.style.color = '#00FF00';
+let greeter = new Greeter(':-)');
+document.body.addEventListener("mousemove", (ev) => {
+    greeter.smile();
+});

@@ -1,7 +1,7 @@
 # VSCodeNewProject
-Rapidly creates a new project in VSCode for local development.
+Rapidly creates a new project in VSCode for local development using webpack and TypeScript.
 
-My intention for this project is to get you up-and-running quick for local development and to demostrate basic web development.  This project has the webpack loaders listed below, but of course, you can add or remove any for your needs.
+My intention for this project, is to get you up-and-running quick for local development and to demostrate basic web development patterns (using TypeScript, CSS, SASS, installing fonts/images, etc).  This project has the webpack loaders listed below, but of course, you can add or remove any for your needs.
 * css-loader
 * extract-loader
 * file-loader
