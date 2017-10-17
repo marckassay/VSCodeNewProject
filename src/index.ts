@@ -14,6 +14,11 @@ class Greeter {
 };
 
 let greeter = new Greeter(':-)');
+let beenGreeted = false;
+
 document.body.addEventListener("mousemove", (ev) => {
-    greeter.smile();
+    if(!beenGreeted) {
+        greeter.smile();
+        beenGreeted = true;
+    }
 });
