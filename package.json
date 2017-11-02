@@ -4,7 +4,8 @@
   "description": "Rapidly creates a new project to be used in VS Code that installs essential package(s).",
   "dependencies": {
     "@types/lodash": "^4.14.77",
-    "@types/webpack": "^3.0.13"
+    "@types/webpack": "^3.0.13",
+    "url-loader": "^0.6.2"
   },
   "devDependencies": {
     "css-loader": "^0.28.7",
