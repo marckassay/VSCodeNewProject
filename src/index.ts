@@ -1,7 +1,8 @@
-require("./assets/css/styles.scss")
+require("./assets/css/svg-logos.scss")
 require("./assets/css/simple-grid.scss")
-require("./assets/css/zc-grid.css")
+require("./assets/css/launchpage.css")
 require("./assets/css/pretty-code.css")
+require("./assets/css/light-box.css")
 require('./index.html');
 
 class Greeter {

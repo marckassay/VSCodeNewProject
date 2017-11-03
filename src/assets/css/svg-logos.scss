@@ -1,0 +1,17 @@
+@function svg-url($svg){
+    @return url("../images/#{$svg}-logo.svg");
+}
+
+@mixin background-svg($svg){
+    content: svg-url($svg);
+}
+
+.vscode {
+    @include background-svg('vscode');
+}
+.typescript {
+    @include background-svg('ts');
+}
+.webpack {
+    @include background-svg('webpack');
+}
