@@ -19,9 +19,11 @@ My intention for this project, is to get you up-and-running quick for local deve
 ## Instructions
 Clone this repository, set location to project folder and install packages:
 ```
-git clone https://github.com/marckassay/VSCodeNewProject.git
-sl ./VSCodeNewProject
-npm install
+E:\> git clone https://github.com/marckassay/VSCodeNewProject.git
+
+E:\> sl ./VSCodeNewProject
+
+E:\> npm install
 ```
 
 After installing, open VSCode and select:
