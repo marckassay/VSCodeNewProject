@@ -27,12 +27,15 @@ E:\> npm install
 ```
 
 After installing, open VSCode and select:
-Tasks > 'Run Task' and select '(Start) Webpack Dev Server' from the tasks list
+
+    Tasks > 'Run Task' and select '(Start) Webpack Dev Server' 
+from the tasks list.
 
 That will start webpack's dev server.  Now just launch Chrome in a debug session:
-Debug > Start Debugging
 
-If everthing goes as intended, you should see the follow webpage:
+    Debug > Start Debugging
+
+If everthing goes as intended, you should see the follow webpage being served by localhost:
 ![Welcome webpage](welcome-screenshot.png)
 
 ## Feedback
